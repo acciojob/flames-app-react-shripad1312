@@ -87,7 +87,7 @@ const App=()=>{
     <input  id="id2" name="name2" data-testid="input2" placeholder="Enter second name" onChange={(e)=>setInput2Value(e.target.value)}></input>
     <button data-testid="calculate_relationship" onClick={check}>Calculate Realationship Future</button>
     <button data-testid="clear" onClick={clearAll}>Clear</button>
-    <h3>{status}</h3>
+    {status.length>0?<h3>{status}</h3>:null}
         </>
  
     );
