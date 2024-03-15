@@ -19,7 +19,7 @@ const App=()=>{
 
     const check=()=>{
 
-        if(input1value===null&&input2value===null){
+        if(input1value===' '&&input2value===' '){
             setStatus1("Please Enter valid input");
             return;
         }
