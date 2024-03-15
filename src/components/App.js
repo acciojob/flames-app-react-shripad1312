@@ -15,27 +15,27 @@ import '../styles/App.css';
 const App=()=>{
     const [input1value,setInput1Value]=useState(null);
     const [input2value,setInput2Value]=useState(null);
-    const [status,setStatus]=useState(null);
+    const [status1,setStatus1]=useState(null);
 
     const check=()=>{
 
         if(input1value===null&&input2value===null){
-            setStatus("Please Enter valid input");
+            setStatus1("Please Enter valid input");
             return;
         }
     let count=removeCommonLettersAndCalculateModulus(input1value,input2value);
     if(count===0){
-      setStatus("Siblings");
+      setStatus1("Siblings");
     }else if(count===1){
-      setStatus("Friends")
+      setStatus1("Friends")
     }else if(count===2){
-       setStatus("Love");
+       setStatus1("Love");
     }else if(count===3){
-        setStatus("Affection");
+        setStatus1("Affection");
     }else if(count===4){
-        setStatus("Marriage");
+        setStatus1("Marriage");
     }else if(count===5){
-        setStatus("Enemy");
+        setStatus1("Enemy");
     }
 
     }
@@ -79,7 +79,7 @@ const App=()=>{
     const clearAll=()=>{
         setInput1Value(null);
         setInput2Value(null);
-        setStatus(null);
+        setStatus1(null);
     }
     return(
         <>
@@ -87,7 +87,7 @@ const App=()=>{
     <input  id="id2" name="name2" data-testid="input2" placeholder="Enter second name" onChange={(e)=>setInput2Value(e.target.value)}></input>
     <button data-testid="calculate_relationship" onClick={check}>Calculate Realationship Future</button>
     <button data-testid="clear" onClick={clearAll}>Clear</button>
-    {status.length>0?<h3>{status}</h3>:null}
+    <h3>{status1}</h3>
         </>
  
     );
