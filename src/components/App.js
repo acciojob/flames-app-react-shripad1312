@@ -15,7 +15,7 @@ import '../styles/App.css';
 const App=()=>{
     const [input1value,setInput1Value]=useState(null);
     const [input2value,setInput2Value]=useState(null);
-    const [status1,setStatus1]=useState(null);
+    const [status1,setStatus1]=useState('');
 
     const check=()=>{
 
@@ -79,7 +79,7 @@ const App=()=>{
     const clearAll=()=>{
         setInput1Value(null);
         setInput2Value(null);
-        setStatus1(null);
+        setStatus1('');
     }
     return(
         <>
@@ -87,7 +87,7 @@ const App=()=>{
     <input  id="id2" name="name2" data-testid="input2" placeholder="Enter second name" onChange={(e)=>setInput2Value(e.target.value)}></input>
     <button data-testid="calculate_relationship" onClick={check}>Calculate Realationship Future</button>
     <button data-testid="clear" onClick={clearAll}>Clear</button>
-    <h3>{status1}</h3>
+    {status1!==''?<h3>{status1}</h3>:null}
         </>
  
     );
