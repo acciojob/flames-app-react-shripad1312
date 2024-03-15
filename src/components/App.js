@@ -83,8 +83,8 @@ const App=()=>{
     }
     return(
         <>
-    <input  id="id1" name="data-testid=input1" data-testid="input1" placeholder="Enter first name" onChange={(e)=>setInput1Value(e.target.value)}></input>
-    <input  id="id2" name="data-testid=input2" data-testid="input2" placeholder="Enter second name" onChange={(e)=>setInput2Value(e.target.value)}></input>
+    <input  id="id1" name="name1" data-testid="input1" placeholder="Enter first name" onChange={(e)=>setInput1Value(e.target.value)}></input>
+    <input  id="id2" name="name2" data-testid="input2" placeholder="Enter second name" onChange={(e)=>setInput2Value(e.target.value)}></input>
     <button data-testid="calculate_relationship" onClick={check}>Calculate Realationship Future</button>
     <button data-testid="clear" onClick={clearAll}>Clear</button>
     <h3>{status}</h3>
